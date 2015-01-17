@@ -13,11 +13,16 @@ end
 
 $shell = <<-CONTENTS
 export DEBIAN_FRONTEND=noninteractive
+echo "Europe/Stockholm" > /etc/timezone    
+dpkg-reconfigure -f noninteractive tzdata
+
 apt-get update
 apt-get install -y python-software-properties software-properties-common
 apt-add-repository -y ppa:duplicity-team/ppa
+
 apt-get update
 apt-get install -y duplicity ncftp lftp rsnapshot tree
+
 echo "cd /vagrant" >> /home/vagrant/.bashrc
 echo "cd /vagrant" >> /root/.bashrc
 chmod -x /etc/update-motd.d/*
