@@ -1,0 +1,29 @@
+# If you are using FTP storage you can assign the password in a variable.
+FTP_PASSWORD="secretpassword"
+
+# The URL controls the backend storange
+#
+# Backends and their URL formats:
+#  cf+http://container_name
+#  file:///some_dir
+#  ftp://username[:password]@other.host[:port]/some_dir
+#  ftps://username[:password]@other.host[:port]/some_dir
+#  hsi://username[:password]@other.host[:port]/some_dir
+#  imap://username[:password]@other.host[:port]/some_dir
+#  rsync://username[:password]@other.host[:port]::/modul/some_dir
+#  rsync://username[:password]@other.host[:port]/relativ_sökväg
+#  rsync://username[:password]@other.host[:port]//absolut_sökväg
+#  s3://other.host/bucket_name[/prefix]
+#  s3+http://bucket_name[/prefix]
+#  scp://username[:password]@other.host[:port]/some_dir
+#  ssh://username[:password]@other.host[:port]/some_dir
+#  swift://container_name
+#  tahoe://alias/katalog
+#  webdav://username[:password]@other.host/some_dir
+#  webdavs://username[:password]@other.host/some_dir
+#  gdocs://username[:password]@other.host/some_dir
+#  mega://username[:password]@other.host/some_dir
+#  copy://username[:password]@other.host/some_dir
+#  dpbx:///some_dir
+
+BACKUP_URL="ftp://username@example.com/backup/wwwdata/"
